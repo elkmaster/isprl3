@@ -5,13 +5,12 @@ import DisplayTable from "./component/DisplayTable";
 
 export default function Album() {
   const [inputs, setInputs] = React.useState<number[][]>([
-    [153, 25, 7.7, 134, 0.41],
-    [140, 18, 4.8, 113, 0.45],
-    [168, 55, 2.9, 126, 0.51],
-    [181, 18, 4.8, 150, 0.68],
-    [160, 35, 5.4, 139, 0.45],
-    [182, 43, 2.8, 113, 0.52],
-    [143, 29, 4.4, 144, 0.57],
+    [153, 25, 7.7, 134],
+    [140, 18, 4.8, 113],
+    [168, 55, 2.9, 126],
+    [181, 18, 4.8, 150],
+    [160, 35, 5.4, 139],
+    [182, 43, 2.8, 113],
   ]);
 
   const calcColSum = (matrix: number[][]) => {
@@ -227,7 +226,7 @@ export default function Album() {
           </Typography>
           <DisplayTable
             matrix={DIST}
-            columns={["P1", "P2", "P3", "P4", "P5", "P6", "P7", "min"]}
+            columns={["P1", "P2", "P3", "P4", "P5", "P6", "min"]}
           />
           <Typography variant="h5" m={2} align="center">
             Критична відстань = {CRIT}
@@ -248,7 +247,7 @@ export default function Album() {
           </Typography>
           <DisplayTable
             matrix={ISODIST}
-            columns={["P1", "P2", "P3", "P4", "P5", "P6", "P7", "min"]}
+            columns={["P1", "P2", "P3", "P4", "P5", "P6", "min"]}
           />
 
           <Typography variant="h5" m={2} align="center">

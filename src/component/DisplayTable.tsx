@@ -20,8 +20,8 @@ const DisplayTable: React.FC<MyTableProps> = ({
   matrix,
   customColumns = [],
   customRows = [],
-  rows = ["P1", "P2", "P3", "P4", "P5", "P6", "P7"],
-  columns = ["X1", "X2", "X3", "X4", "X5"],
+  rows = ["P1", "P2", "P3", "P4", "P5", "P6"],
+  columns = ["X1", "X2", "X3", "X4"],
 }) => {
   const columnsArr = [...columns, ...customColumns];
   const rowsArr = [...rows, ...customRows];

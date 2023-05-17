@@ -15,8 +15,11 @@ interface InputTableProps {
 }
 
 const InputTable: React.FC<InputTableProps> = ({ onChange, initialMatrix }) => {
-  const columns = ["X1", "X2", "X3", "X4", "X5"];
-  const rows = ["P1", "P2", "P3", "P4", "P5", "P6", "P7"];
+  const columns = ["X1", "X2", "X3", "X4"];
+  //const columns = ["X1", "X2", "X3", "X4", "X5"];
+
+  const rows = ["P1", "P2", "P3", "P4", "P5", "P6"];
+  //const rows = ["P1", "P2", "P3", "P4", "P5", "P6", "P7"];
 
   const [matrix, setMatrix] = useState(initialMatrix);
 
