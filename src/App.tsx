@@ -147,8 +147,9 @@ export default function Album() {
 
   const isoNorm = (matrix: number[][]): number[][] =>
     matrix.map((row) => {
-      const last = row.pop() || 1;
-      return row.map((e) => e / last);
+      const newRow = [...row];
+      const last = newRow.pop() || 1;
+      return newRow.map((e) => e / last);
     });
 
   const calcIsoDistances = (array: number[][]): number[][] => {
@@ -184,7 +185,9 @@ export default function Album() {
   const NORM = appendRowSums(divideOnSums(inputs, calcColSum(inputs)));
   const DIST = appendRowMins(calcDistances(getLastCol(NORM)));
   const CRIT = maxOfMin(calcDistances(getLastCol(NORM)));
-  const CLUSTERS = clasterize(CRIT, getLastCol(DIST));
+  const CLUSTERS = clasterize(CRIT, [...getLastCol(DIST)]);
+
+  console.log(NORM);
 
   const ISOMORFNORM = isoNorm(NORM);
   const ISODIST = appendRowMins(calcIsoDistances(ISOMORFNORM));
